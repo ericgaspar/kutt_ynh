@@ -38,12 +38,6 @@
                 "example": "example.com"
             },
             {
-                "name": "path",
-                "type": "path",
-                "example": "/kutt",
-                "default": "/kutt"
-            },
-            {
                 "name": "admin",
                 "type": "user",
                 "example": "johndoe"
