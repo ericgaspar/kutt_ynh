@@ -1,5 +1,5 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 checksum
+SOURCE_URL=https://github.com/thedevs-network/kutt/archive/refs/tags/v2.7.1.tar.gz
+SOURCE_SUM=4fa9e3f311020deff0558062786f97a4c6cfff23795e1a18a990cbdc5f964cc5
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
