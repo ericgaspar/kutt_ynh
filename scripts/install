@@ -120,8 +120,8 @@ chown -R $app $final_path
 
 pushd $final_path
  	ynh_use_nodejs
- 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH npm install
- 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH npm run build
+ 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install
+ 	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run build
 popd
 
 #=================================================
@@ -157,7 +157,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Modern URL Shortener" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
@@ -165,7 +165,7 @@ yunohost service add $app --description="A short description of the app" --log="
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action="start" --log_path="systemd"
 
 #=================================================
 # SETUP SSOWAT

@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/thedevs-network/kutt/archive/refs/tags/v2.7.1.tar.gz
-SOURCE_SUM=4fa9e3f311020deff0558062786f97a4c6cfff23795e1a18a990cbdc5f964cc5
+SOURCE_URL=https://github.com/thedevs-network/kutt/archive/refs/tags/v2.7.4.tar.gz
+SOURCE_SUM=862d34f41327889f09a81860aa00b81ebe583a5fc7158212925d22a0209cb966
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
