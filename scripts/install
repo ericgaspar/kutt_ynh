@@ -113,11 +113,11 @@ ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 ynh_add_nginx_config
 
 #=================================================
-# INSTALL ETHERPAD
+# INSTALL KUTT
 #=================================================
 ynh_script_progression --message="Installing the app..." --weight=20
 
-pushd $final_path
+pushd "$final_path"
  	ynh_use_nodejs
  	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm install
  	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH $ynh_npm run build
@@ -141,16 +141,6 @@ ynh_script_progression --message="Configuring a systemd service..." --weight=3
 env_path="$PATH"
 # Create a dedicated systemd config
 ynh_add_systemd_config
-
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# SETUP LOGROTATE
-#=================================================
-ynh_script_progression --message="Configuring log rotation..." --weight=1
-
-# Use logrotate to manage application logfile(s)
-ynh_use_logrotate
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
